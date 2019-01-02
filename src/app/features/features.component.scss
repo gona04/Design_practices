@@ -1,0 +1,50 @@
+@import "../../scss/layout";
+@import "../../scss/typography";
+@import "../../scss/utilities";
+
+.section-about {
+        background-color:#e7e8f3;
+        padding-top: 3rem;
+        padding-bottom: 8rem;
+        margin-top: -10rem;
+
+        transform: skewY(-6deg);
+
+        & > * {
+                transform: skewY(6deg);
+        }
+}
+
+// .section-features {
+//         padding: 20rem 0;
+//         background-color:#e7e8f3;
+// }
+.feature-box {
+        background-color: rgba(255, 255, 255, 0.521);
+        font-size: 1rem;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba(black, .15);
+        transition: transform .5s;
+        min-width:  10.1rem;
+        max-width: 12.5rem;
+        min-height: 20rem;
+        max-height: 20rem;
+        display: block;
+        &_icon {
+            font-size: 6rem;
+            margin-bottom: .5rem; 
+            display: inline-block;
+            background-image:  linear-gradient(to right,$color-primary,$color-secondary);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &:hover {
+                transform: translateY(-1.5rem) scale(1.03);
+        }
+        &_text {
+
+        }
+}

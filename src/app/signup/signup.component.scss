@@ -1,0 +1,376 @@
+@import "../../scss/base";
+@import "../../scss/layout";
+@import "../../scss/animations";
+@import "../../scss/layout";
+@import "../../scss/typography";
+
+.text-box {
+    position: relative;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+.btn {
+
+&:link,
+&:visited {
+
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 21rem;
+    transition: all .2s;
+    position: relative;
+
+}
+
+&:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0,0, .2);
+
+    &::after {
+        background-color:#fff;
+    }
+    
+    &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+}
+
+&:active {
+    transform: translateY(-.1rem);
+}
+&-white {
+    background-color: #fff;
+    color: #777;
+    padding: 1.5rem 4rem;
+
+    &::after {
+        background-color: #fff;
+    }
+  
+}
+
+&::after {
+     content: "";
+     display: inline-block;
+     height: 100%;
+     width: 100%;
+     border-radius: 10rem;
+     position: relative;
+     top:0;
+     left: 0;
+     z-index: -1;
+     transition: all .4s;
+}
+&-animated {
+    animation: moveInBottom 5s ease-out;
+    /* duration timing-function delay iteration-count direction fill-mode; */
+}
+
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../../assets/fonts/ubuntu/Ubuntu-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../../assets/fonts/ubuntu/Ubuntu-Bold.ttf'); 
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+// * {
+//     margin: 0rem; 
+//     padding: 0rem; 
+//     box-sizing: border-box;
+// }
+
+// body, html {
+//     height: 100%;
+//     font-family: Ubuntu-Regular, sans-serif;
+// }
+
+/*---------------------------------------------*/
+a {
+    font-family: Ubuntu-Regular;
+    font-size: .9rem;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0rem;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+
+    &:focus {
+            outline: none !important;
+        }
+
+    &:hover {
+        text-decoration: none;
+        color: #403866;
+    }
+}
+
+
+
+/*---------------------------------------------*/
+// h2,h3,h4,h5,h6 {
+//     margin: 0rem;
+    
+// }
+
+p {
+    font-family: Ubuntu-Regular;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0rem;
+}
+
+ul, li {
+    margin: 0rem;
+    list-style-type: none;
+}
+
+
+/*---------------------------------------------*/
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: Ubuntu-Regular;
+  font-size: 1.6rem;
+  color: #827ffe;
+  line-height: 1.4;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ SIGN UP FORM]*/
+
+.pre-container {
+  // background: #A0A9CC;
+  color: #fff;
+  font-size: 1.5rem;
+  // font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container {
+  margin-top: -30rem;
+  background: #B7BED8;
+  color: #6A79A6;
+  display: inline-block;
+  padding: 0rem 0rem 0rem 6rem;
+
+  // margin: 6em auto;
+  box-shadow: 0 5rem 5rem rgba(0, 0, 0, .2);
+  .navigation {
+    text-align: left;
+    ol {
+      list-style: none;
+      background: #B7BED8;
+      position: absolute;
+      padding: 2rem 0;
+      width: 50rem;
+      z-index: 100;
+      li {
+        display: inline-block;
+        margin-right: 2.7rem;
+        font-size: 0.7rem;
+        max-width: 20%;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        a {
+          color: #fff;
+          text-decoration: none;
+          position: relative;
+          z-index: 2;
+          cursor: pointer;
+          opacity: 0;
+          &.done {
+            opacity: 1;
+          }
+        }
+      }
+      margin-bottom: 3rem;
+    }
+  }
+  .sign-form {
+    width: 50rem;
+    text-align: left;
+    margin: 5.5rem 0 0 0;
+    #next-page {
+      opacity: 0;
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 2rem;
+      background: url("https://jdniki.github.io/signup/images/next-page.svg");
+      background-size: contain;
+      &:hover {
+        background: url("https://jdniki.github.io/signup/images/next-pagehover.svg");
+        background-size: contain;
+      }
+    }
+    .questions {
+      list-style: none;
+      -webkit-transition: height 0.4s;
+      transition: height 0.4s;
+      width: 88%;
+      display: inline-block;
+      height: 5rem;
+      li {
+        position: absolute;
+        width: 30rem;
+        span {
+          display: block;
+          margin-bottom: 1rem;
+        }
+        input {
+          width: 100%;
+          font-size: .8em;
+          color: #f2f2f2;
+          margin: 0.3em 0 1em 0;
+          border: none;
+          background: none;
+          border-bottom: .1rem solid #fff;
+          padding: 0.5em 0.1em;
+          transition: all 0.5s ease;
+          &:focus {
+            outline: none;
+            border-bottom: 0.1rem solid #6A79A6;
+          }
+        }
+        &:not(:first-child) {
+          opacity: 0;
+          margin-top: 5rem;
+        }
+        /*-------------Password ------------------*/
+        #viewpswd {
+          position: absolute;
+          opacity: 0;
+          //                    z-index:-100;
+        }
+        #show-pwd {
+          margin: -2.75em 0em;
+          width: 3rem;
+          height: 3rem;
+          position: absolute;
+          right: 0;
+          color: rgba(255, 255, 255, 0.4);
+          cursor: pointer;
+          &.view {
+            background: url("https://jdniki.github.io/signup/images/view.svg");
+            background-size: contain;
+          }
+          &.hide {
+            background: url("https://jdniki.github.io/signup/images/hide.svg");
+            background-size: contain;
+          }
+        }
+        #show-pwd:active,
+        #show-pwd:focus {
+          background: url("https://jdniki.github.io/signup/images/hide.svg");
+          background-size: contain;
+        }
+        select.country {
+          position: absolute;
+          width: 4.5em;
+          font-size: 0.7em;
+          color: black;
+          height: 2.5rem;
+          background: #B7BED8;
+          border: .1rem solid #ccc;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border: none;
+        }
+        #phone {
+          padding-left: 5em;
+        }
+      }
+    }
+  }
+  .error-message {
+    color:maroon;
+    font-size: .8rem;
+    margin-top: .8rem;
+    padding-bottom: 1.3rem;
+    font-weight: 200;
+    background: #B7BED8;
+  }
+}
+
+::-webkit-input-placeholder {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+:-ms-input-placeholder {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@-webkit-keyframes moveUpFromDown {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes moveUpFromDown {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.country {
+  background-color: #403866
+}
