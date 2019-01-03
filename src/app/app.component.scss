@@ -1,4 +1,5 @@
  @import "../scss/variables";
+ @import "../scss/mixin";
 // @import "../scss/layout";
     .logo-box {
         margin-top: 0rem;
@@ -16,7 +17,7 @@
     }
     
     
-.navigation {
+.navigation1 {
    width: 100%;
    &_checkbox {
       display: none;
@@ -43,7 +44,7 @@
        position: fixed;
        top: 1.3rem;
        right: 1.3rem;
-       background-image: radial-gradient(#8fb7ec, #5e10d4f8);
+       background-image: radial-gradient(#8fb7ecf5, #5e10d4f6);
        
        z-index: 1000;
          

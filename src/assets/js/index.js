@@ -15,7 +15,7 @@
               opacity: 1
             }, 200);
             thisInput.closest('li').prevAll('li').animate({
-                marginTop: '-150px',
+                marginTop: '-15rem',
                 opacity: 0
               }, 200)
               //                     .AddClass('done');
@@ -54,7 +54,10 @@
                 errorMessage(erroEle, "isn't your " + focusInput.attr('name') + " bit small. ", 'visible', 1);
               } else if (focusInput.attr('name') == 'email' && !validateEmail(focusInput.val())) {
                 errorMessage(erroEle, "It doesn't look like a " + focusInput.attr('name'), 'visible', 1);
-              } else if (focusInput.attr('name') == 'phone' && !validatePhone(focusInput.val())) {
+              }else if (focusInput.attr('name') == 'cemail' && !validateEmail(focusInput.val())) {
+                errorMessage(erroEle, "It doesn't look like a " + focusInput.attr('name'), 'visible', 1);
+              }
+              else if (focusInput.attr('name') == 'phone' && !validatePhone(focusInput.val())) {
                 errorMessage(erroEle, "It doesn't look like a " + focusInput.attr('name'), 'visible', 1);
               } else {
 
@@ -71,7 +74,7 @@
           $("input[type='text']").keyup(function(event) {
             var focusInput = $(this);
             if (focusInput.val().length > 1) {
-              if ((focusInput.attr('name') == 'email' && !validateEmail(focusInput.val())) ||
+              if ((focusInput.attr('name') == 'email' && !validateEmail(focusInput.val())) || (focusInput.attr('name') == 'cemail' && !validateEmail(focusInput.val())) ||
                 (focusInput.attr('name') == 'phone' && !validatePhone(focusInput.val()))) {
                 $('#next-page').css('opacity', 0);
               } else {
@@ -93,7 +96,7 @@
 
           $('#signup').click(function() {
             $('.navigation').fadeOut(400).css({
-              'display': 'none'
+              // 'display': 'none'
             });
             $('#sign-form').fadeOut(400).css({
               'display': 'none'
