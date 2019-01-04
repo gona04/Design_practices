@@ -1,8 +1,21 @@
-@import "../../scss/base";
-@import "../../scss/layout";
+@import "../../scss/variables";
 @import "../../scss/animations";
-@import "../../scss/layout";
+@import "../../scss/utilities";
 @import "../../scss/typography";
+
+
+
+
+.header {
+  margin-top: -2rem;
+  width: 100%;
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, $color-primary, $color-secondary) ,url(../../assets/images/office2.png);
+  background-size: cover;
+  background-position: top; 
+  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0% 100%);
+  position: relative;
+}
 
 .text-box {
     position: relative;
@@ -10,6 +23,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    // margin-bottom: 2.5rem;
 }
 
 
@@ -136,7 +150,7 @@ a {
 
 p {
     font-family: Ubuntu-Regular;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.7;
     color: #666666;
     margin: 0rem;
@@ -180,19 +194,27 @@ ul, li {
 }
 
 .container {
-  margin-top: -30rem;
-  background: #B7BED8;
-  color: #6A79A6;
+  margin-top: -5rem;
+  background: rgba(183, 190, 216, 0.404);
+  height: 20rem;
+  // background: transparent;
+  // color: #6A79A6;
+  color: #666666;
+  // text-shadow: rgb(101, 110, 112) 1px 0 10px;
+  // color: rgb(235, 205, 129);
+  // text-shadow: rgb(101, 110, 112) 1px 0 10px;
   display: inline-block;
   padding: 0rem 0rem 0rem 6rem;
-
+  font-weight: 500;
+  font-size: 2rem;
   // margin: 6em auto;
   box-shadow: 0 5rem 5rem rgba(0, 0, 0, .2);
   .navigation {
     text-align: left;
     ol {
       list-style: none;
-      background: #B7BED8;
+      background: rgba(183, 190, 216, 0.062);
+      // background: transparent;
       position: absolute;
       padding: 2rem 0;
       width: 40rem;
@@ -222,16 +244,18 @@ ul, li {
     }
   }
   .sign-form {
+  
     width: 50rem;
     text-align: left;
     margin: 5.5rem 0 0 0;
     #next-page {
+      // z-index: 3000;
       opacity: 0;
-      width: 2rem;
-      height: 2rem;
+      width: 3rem;
+      height: 3rem;
       display: inline-block;
       vertical-align: middle;
-      margin-left: 2rem;
+      margin-left: -6rem;
       background: url("https://jdniki.github.io/signup/images/next-page.svg");
       background-size: contain;
       &:hover {
@@ -255,7 +279,7 @@ ul, li {
         }
         input {
           width: 100%;
-          font-size: .8em;
+          font-size: 1.5rem;
           color: #f2f2f2;
           margin: 0.3em 0 1em 0;
           border: none;
@@ -320,12 +344,12 @@ ul, li {
     }
   }
   .error-message {
-    color:maroon;
-    font-size: .8rem;
-    margin-top: .8rem;
+    color: maroon;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
     padding-bottom: 1.3rem;
-    font-weight: 200;
-    background: #B7BED8;
+    font-weight: 550;
+    background: rgba(183, 190, 216, 0.089);
   }
 }
 

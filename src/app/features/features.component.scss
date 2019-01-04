@@ -4,7 +4,7 @@
 
 .section-about {
         background-color:#e7e8f3;
-        padding-top: 3rem;
+        padding-top: 8rem;
         padding-bottom: 8rem;
         margin-top: -10rem;
 
@@ -20,21 +20,24 @@
 //         background-color:#e7e8f3;
 // }
 .feature-box {
+        margin-top: -4rem;
         background-color: rgba(255, 255, 255, 0.521);
-        font-size: 1rem;
-        padding: 2.5rem;
+        font-size: 1.5rem;
+        padding: 1.5rem;
         text-align: center;
         border-radius: .3rem;
-        box-shadow: 0 1.5rem 4rem rgba(black, .15);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        transition: -webkit-transform .5s;
         transition: transform .5s;
-        min-width:  10.1rem;
-        max-width: 12.5rem;
-        min-height: 20rem;
-        max-height: 20rem;
+        transition: transform .5s, -webkit-transform .5s;
+        min-width: 20rem;
+        max-width: 20rem;
+        min-height: 30rem;
+        max-height: 30rem;
         display: block;
         &_icon {
-            font-size: 6rem;
-            margin-bottom: .5rem; 
+            font-size: 7.5rem;
+            margin-bottom: 1.5rem; 
             display: inline-block;
             background-image:  linear-gradient(to right,$color-primary,$color-secondary);
             -webkit-background-clip: text;

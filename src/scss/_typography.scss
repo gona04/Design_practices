@@ -11,7 +11,7 @@
     &-main {
         display: inline-block;
         margin-top: 7rem;
-        font-size: 3rem;
+        font-size: 4.5rem;
         font-weight: 400;
         letter-spacing: .5rem;
         animation-name: moveInLeft;
@@ -21,7 +21,6 @@
     &-sub {
     
         display: block;
-        font-size: 2rem;
         font-weight: 900;
         letter-spacing: .3rem;
         animation-name: moveInRight;
@@ -32,9 +31,7 @@
 }
 
 .heading-secondary {
-    
-  
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     background-image: linear-gradient(to right,$color-primary,$color-secondary);
@@ -43,7 +40,7 @@
     color: transparent;
     letter-spacing:  .2rem;
     transition: all .2s;
-    
+    margin-bottom: 2.5rem;
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba(black, .2);

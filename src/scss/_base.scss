@@ -21,8 +21,30 @@ body {
     color: #777; 
     // padding: 30px;
     height: 100%;
-    width: 100%;
+    // width: 100%;
     font-family: Ubuntu-Regular, sans-serif;
+
+
+  
+
+        @include respond(tab-land) {
+        width: 200%;
+        font-size: 70%;
+    }
+
+    @include respond(tab-port) {
+        width: 200%;
+        font-size: 60%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 80%;
+    }
+
+    @include respond-phone {
+        width: 320%;
+        font-size: 50%;
+    }
 }
 
 html {
@@ -32,12 +54,12 @@ html {
         font-size: 50%;
     }
 
-    @include respond(tab-port) {
-        font-size: 60%;
-    }
-
     @include respond(tab-land) {
         font-size: 70%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 60%;
     }
 
     @include respond(big-desktop) {
